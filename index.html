@@ -1,0 +1,190 @@
+<!--
+
+Search & Replace the following variables:
+{SITE TITLE}
+{SITE DESCRIPTION}
+{YOUR NAME}
+{YOUR PRONOUNS}
+{YOUR BIO}
+{CONTACT TEXT}
+{CONTACT URL}
+
+Repeats for each social icon:
+{PROFILE URL}
+{NETWORK NAME}
+
+Repeats for each animation thumbnail:
+{ANIMATION TITLE}
+{ANIMATION THUMBNAIL}
+{ANIMATION URL}
+
+Repeats for each artwork thumbnail:
+{ARTWORK TITLE}
+{ARTWORK THUMBNAIL}
+{ARTWORK URL}
+
+Repeats for each favorite thumbnail:
+{FAVORITE TITLE}
+{FAVORITE THUMBNAIL}
+{FAVORITE URL}
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>{SITE TITLE}</title>
+    <meta name="title" content="{SITE TITLE}" />
+    <meta name="description" content="{SITE DESCRIPTION}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{SITE URL}" />
+    <meta property="og:title" content="{SITE TITLE}" />
+    <meta property="og:description" content="{SITE DESCRIPTION}" />
+    <meta property="og:image" content="content/images/share-image.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{SITE URL}" />
+    <meta property="twitter:title" content="{SITE TITLE}" />
+    <meta property="twitter:description" content="{SITE DESCRIPTION}" />
+    <meta property="twitter:image" content="content/images/share-image.jpg" />
+    <link href="content/fonts/material-icons/style.css" rel="stylesheet" type="text/css" />
+    <link href="content/fonts/roboto/style.css" rel="stylesheet" type="text/css" />
+    <link href="content/fonts/socicon/style.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/minireset.min.css" rel="stylesheet" type="text/css" />
+    <link href="content/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="content/images/favicon.png" rel="icon" />
+  </head>
+  <body>
+    <input checked class="mn_pg" id="pg1" name="mn_pg" type="radio" value="animation" />
+    <input class="mn_pg" id="pg2" name="mn_pg" type="radio" value="artwork" />
+    <input class="mn_pg" id="pg3" name="mn_pg" type="radio" value="favorites" />
+    <main class="mn">
+      <header class="hd">
+        <div class="pg">
+          <div class="fx fx-ac fx-sb">
+            <div class="fx_cn">
+              <img alt="{SITE TITLE}" class="hd_tl" src="content/images/title.png" />
+            </div>
+            <div align="right" class="fx_cn rs-dk">
+              <label class="hd_nv mn_pg_nv mn_pg_nv-pg1" for="pg1">
+                <i class="material-icons fn-bd on">movie</i>
+                <i class="material-icons off">movie</i>
+              </label>
+              <label class="hd_nv mn_pg_nv mn_pg_nv-pg2" for="pg2">
+                <i class="material-icons fn-bd on">palette</i>
+                <i class="material-icons off">palette</i>
+              </label>
+              <label class="hd_nv mn_pg_nv mn_pg_nv-pg3" for="pg3">
+                <i class="material-icons on">favorite</i>
+                <i class="material-icons off">favorite_outline</i>
+              </label>
+            </div>
+            <div align="right" class="fx_cn rs-mb">
+              <a class="hd_nv" href="javascript:navigator.share&&navigator.share({title:'{SITE TITLE}',url:window.location.href});">
+                <i class="material-icons">ios_share</i>
+              </a>
+            </div>
+          </div>
+         </div>
+      </header>
+      <div class="pg">
+        <section class="in">
+          <div class="fx fx-sb fx-wp">
+            <div class="fx_cn in_pp">
+              <img alt="{YOUR NAME}" class="in_pp_im" src="content/images/profile-photo.jpg" />
+            </div>
+            <div class="fx_cn in_tl">
+              <h1>
+                <sup>{YOUR NAME}</sup>
+                <sub>{YOUR PRONOUNS}</sub>
+              </h1>
+            </div>
+            <div class="fx_cn in_in">
+              <blockquote>
+                <p>{YOUR BIO}</p>
+              </blockquote>
+            </div>
+            <div class="fx_cn in_ct">
+              <a class="in_nv_ln rs-dk" href="{CONTACT URL}" target="_blank">
+                <i class="material-icons">send</i>
+                <span>{CONTACT TEXT}</span>
+              </a>
+            </div>
+            <div class="fx_cn in_nv">
+              <!-- Start: Social Icon -->
+              <a class="in_nv_ic" href="{PROFILE URL}" target="_blank">
+                <i class="socicon-{NETWORK NAME}"></i>
+              </a>
+              <!-- End: Social Icon -->
+            </div>
+          </div>
+        </section>
+        <nav class="pg_nv">
+          <div class="fx">
+            <label class="fx_cn mn_pg_nv mn_pg_nv-pg1" for="pg1">
+              <span class="mn_pg_nv_ic">
+                <i class="material-icons fn-bd on">movie</i>
+                <i class="material-icons off">movie</i>
+              </span>
+              <span class="mn_pg_nv_lb">animation</span>
+            </label>
+            <label class="fx_cn mn_pg_nv mn_pg_nv-pg2" for="pg2">
+              <span class="mn_pg_nv_ic">
+                <i class="material-icons fn-bd on">palette</i>
+                <i class="material-icons off">palette</i>
+              </span>
+              <span class="mn_pg_nv_lb">artwork</span>
+            </label>
+            <label class="fx_cn mn_pg_nv mn_pg_nv-pg3" for="pg3">
+              <span class="mn_pg_nv_ic">
+                <i class="material-icons on">favorite</i>
+                <i class="material-icons off">favorite_outline</i>
+              </span>
+              <span class="mn_pg_nv_lb">favorites</span>
+            </label>
+          </div>
+        </nav>
+        <section class="mn_pg-pg1">
+          <div class="fx fx-sb fx-wp pg_gd">
+            <!-- Start: Animation Column -->
+            <div class="fx_cn pg_gd_tn">
+              <a href="{ANIMATION URL}" target="_blank" title="{ANIMATION TITLE}">
+                <img loading="lazy" src="content/images/animations/{ANIMATION THUMBNAIL}.jpg" />
+              </a>
+            </div>
+            <!-- End: Animation Column -->
+          </div>
+        </section>
+        <section class="mn_pg-pg2">
+          <div class="fx fx-sb fx-wp pg_gd">
+            <!-- Start: Artwork Column -->
+            <div class="fx_cn pg_gd_tn">
+              <a href="{ARTWORK URL}" target="_blank" title="{ARTWORK TITLE}">
+                <img loading="lazy" src="content/images/artwork/{ARTWORK THUMBNAIL}.jpg" />
+              </a>
+            </div>
+            <!-- End: Artwork Column -->
+          </div>
+        </section>
+        <section class="mn_pg-pg3">
+          <div class="fx fx-sb fx-wp pg_gd">
+            <!-- Start: Artist Column -->
+            <div class="fx_cn pg_gd_tn">
+              <a href="{FAVORITE URL}" target="_blank" title="{FAVORITE TITLE}">
+                <img loading="lazy" src="content/images/favorites/{FAVORITE THUMBNAIL}.jpg" />
+              </a>
+            </div>
+            <!-- End: Artist Column -->
+          </div>
+        </section>
+      </div>
+      <footer class="ft">
+        <blockquote align="center" class="ft_cp">
+          <p>&copy; {YOUR NAME} 2022</p>
+        </blockquote>
+      </footer>
+    </main>
+    <script src="content/javascript/modernizr.custom.js"></script>
+    <script src="content/javascript/script.js"></script>
+  </body>
+</html>
