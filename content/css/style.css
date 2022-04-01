@@ -1,0 +1,360 @@
+
+/* CSS written by Ryan Boylett 2022 | rytoonist.com */
+
+/* General Properties */
+html { font-size: 10px }
+
+@media (min-width: 476px) and (max-width: 940px) { html { font-size: 1vw } }
+
+@media (max-width: 475px) { html { font-size: 2.66vw } }
+
+body {
+  background: #FAFBFC;
+  font-family: 'roboto-web', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #020C22
+}
+
+p {
+  font: inherit;
+  line-height: 1.45em
+}
+
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0) }
+
+/* Responsive Design Modifiers */
+@media (min-width: 476px) { .rs-mb { display: none } }
+@media (max-width: 475px) { .rs-dk { display: none } }
+
+/* Font Attributes */
+[align="left"] { text-align: left }
+[align="center"] { text-align: center }
+[align="right"] { text-align: right }
+.fn-bd { font-weight: bold }
+.fn-it { font-style: italic }
+
+/* Flex Modifiers */
+.fx { display: flex }
+.fx-al { align-items: flex-start }
+.fx-ac { align-items: center }
+.fx-ar { align-items: flex-end }
+.fx-sb { justify-content: space-between }
+.fx-wp { flex-wrap: wrap }
+.fx_cn { flex: 0 0 auto }
+.fx_cn-gr { flex-grow: 1 }
+.fx_cn-sr { flex-shrink: 1 }
+
+/* Main Header */
+.hd {
+  background: white;
+  border-bottom: 1px solid #D7D8DB
+}
+
+.hd_tl {
+  margin: 0 1rem;
+  height: 2.5rem
+}
+
+.hd_nv {
+  display: inline-block;
+  margin: 0 .5rem;
+  padding: .5rem;
+  line-height: 1em;
+  text-decoration: none;
+  font-size: 3rem;
+  color: inherit;
+  cursor: pointer
+}
+
+.hd_nv .material-icons {
+  display: block;
+  font-size: 1em
+}
+
+.hd .fx { height: 6.5rem }
+
+/* Main Page Navigation Modifiers */
+.mn_pg,
+.mn_pg_nv .on,
+.mn_pg-pg1,
+.mn_pg-pg2,
+.mn_pg-pg3 { display: none }
+
+.mn_pg#pg1:checked ~ .mn .pg_nv .mn_pg_nv-pg1 { color: inherit }
+.mn_pg#pg1:checked ~ .mn .pg_nv .mn_pg_nv-pg1:before { background: #020C22 }
+.mn_pg#pg1:checked ~ .mn .mn_pg_nv-pg1 .on { display: block }
+.mn_pg#pg1:checked ~ .mn .mn_pg_nv-pg1 .off { display: none }
+.mn_pg#pg1:checked ~ .mn .mn_pg-pg1 { display: block }
+
+.mn_pg#pg2:checked ~ .mn .pg_nv .mn_pg_nv-pg2 { color: inherit }
+.mn_pg#pg2:checked ~ .mn .pg_nv .mn_pg_nv-pg2:before { background: #020C22 }
+.mn_pg#pg2:checked ~ .mn .mn_pg_nv-pg2 .on { display: block }
+.mn_pg#pg2:checked ~ .mn .mn_pg_nv-pg2 .off { display: none }
+.mn_pg#pg2:checked ~ .mn .mn_pg-pg2 { display: block }
+
+.mn_pg#pg3:checked ~ .mn .pg_nv .mn_pg_nv-pg3 { color: inherit }
+.mn_pg#pg3:checked ~ .mn .pg_nv .mn_pg_nv-pg3:before { background: #020C22 }
+.mn_pg#pg3:checked ~ .mn .mn_pg_nv-pg3 .on { display: block }
+.mn_pg#pg3:checked ~ .mn .mn_pg_nv-pg3 .off { display: none }
+.mn_pg#pg3:checked ~ .mn .mn_pg-pg3 { display: block }
+
+/* Page Container */
+.pg {
+  display: block;
+  margin: 0 auto;
+  width: 94rem;
+  max-width: 95%
+}
+
+/* Page Navigation */
+.pg_nv { position: relative }
+
+.pg_nv:before,
+.pg_nv .mn_pg_nv:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #D7D8DB;
+  content: ""
+}
+
+.pg_nv .mn_pg_nv {
+  position: relative;
+  margin: 0 2rem 0 0;
+  padding: 1.15rem 1rem 1.25rem;
+  font-size: 1.6rem;
+  color: #979DB1;
+  cursor: pointer
+}
+
+.pg_nv .mn_pg_nv:before { background: transparent }
+
+.pg_nv .mn_pg_nv:focus,
+.pg_nv .mn_pg_nv:hover { color: inherit }
+
+.pg_nv .mn_pg_nv_ic,
+.pg_nv .mn_pg_nv_lb {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.pg_nv .mn_pg_nv_lb {
+  margin-left: .5em
+}
+
+.pg_nv .mn_pg_nv .material-icons { font-size: 1.5em }
+
+.pg_nv .mn_pg_nv-pg1 { margin-left: 32rem }
+.pg_nv .mn_pg_nv:last-child { margin-right: 0 }
+
+/* Page Grid */
+.pg_gd_tn {
+  width: 31.9148936%;
+  flex: 0 0 31.9148936%;
+  margin: 2rem 0 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .10)
+}
+
+.pg_gd_tn img {
+  display: block;
+  width: 100%;
+  height: auto
+}
+
+/* Intro Block */
+.in {
+  position: relative;
+  margin: 3rem 0 4rem
+}
+
+.in > .fx { padding: 0 0 0 32rem }
+
+.in_pp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32rem;
+  text-align: center
+}
+
+.in_pp_im {
+  display: inline-block;
+  width: 15rem;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid #D7D8DB
+}
+
+.in_tl h1 { font-size: 2.2rem }
+
+.in_tl h1 sup,
+.in_tl h1 sub {
+  font: inherit;
+  vertical-align: inherit
+}
+
+.in_tl h1 sub {
+  margin: 0 0 0 .66em;
+  color: #979DB1
+}
+
+.in_in {
+  margin: 2.5rem 0;
+  width: 100%;
+  flex: 0 0 100%
+}
+
+.in_in blockquote { font-size: 1.6rem }
+
+.in_ct {
+  width: auto;
+  flex: 0 1 auto
+}
+
+.in_nv {
+  width: auto;
+  flex: 0 1 auto
+}
+
+.in_ct a,
+.in_nv a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: inherit
+}
+
+.in_ct a span,
+.in_nv a span {
+  display: inline-block;
+  margin: 0 0 0 .4em;
+  vertical-align: middle
+}
+
+.in_ct a .material-icons,
+.in_nv a .material-icons { font-size: 1.375em }
+
+a.in_nv_ic {
+  display: inline-block;
+  margin: 0 0 0 .66em;
+  font-size: 2.2rem;
+  color: #979DB1
+}
+
+a.in_nv_ic:focus,
+a.in_nv_ic:hover { color: inherit }
+a.in_nv_ic:first-of-type { margin-left: 0 }
+
+a.in_nv_ln { color: #4E68A2 }
+
+/* Main Footer */
+.ft { margin: 10rem 0 5rem }
+
+.ft_cp {
+  font-size: 1.3rem;
+  color: #979DB1
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 475px) {
+
+  /* General Properties */
+  body { background: white }
+
+  /* Main Header */
+  .hd {
+    margin: 1rem 0 1.5rem;
+    border-bottom: none
+  }
+  
+  .hd_tl { margin: 0 2rem }
+  
+  .hd_nv {
+    margin: 0 3.5rem 0 0;
+    padding: 0
+  }
+  
+  .hd .fx { height: auto }
+  
+  /* Page Container */
+  .pg { max-width: 100% }
+  
+  /* Page Grid */
+  .pg_gd_tn {
+    width: 33.1555%;
+    flex: 0 0 33.1555%;
+    margin: 0 0 1px;
+    box-shadow: none
+  }
+  
+  .pg_gd_tn img {
+    display: block;
+    width: 100%;
+    height: auto
+  }
+  
+  /* Intro Block */
+  .in { margin: 0 2rem }
+  .in > .fx { padding: 0 }
+  
+  .in_pp {
+    width: 9rem
+  }
+  
+  .in_pp_im { width: 100% }
+  
+  .in_tl {
+    margin: 1rem 0 0 11rem;
+    order: 1
+  }
+  
+  .in_tl h1 { font-size: 1.8rem }
+  
+  .in_in {
+    margin: 3.5rem 0 0;
+    order: 3
+  }
+  
+  .in_in blockquote { font-size: 1.3rem }
+  
+  .in_ct {
+    margin: 1.5rem 0;
+    width: auto;
+    flex: 0 1 auto;
+    order: 4
+  }
+  
+  .in_ct a { font-size: 1.3rem }
+  
+  .in_nv {
+    margin: 1.5rem 0 0 11rem;
+    width: auto;
+    flex: 1 1 auto;
+    order: 2
+  }
+  
+  /* Page Navigation */
+  .pg_nv:before,
+  .pg_nv .mn_pg_nv:before {
+    top: auto;
+    bottom: 0
+  }
+  
+  .pg_nv .mn_pg_nv {
+    margin: 0;
+    flex: 1 1 auto;
+    text-align: center
+  }
+  
+  .pg_nv .mn_pg_nv_lb { display: none }
+  .pg_nv .mn_pg_nv-pg1 { margin-left: 0 }
+  
+  /* Main Footer */
+  .ft { margin: 3rem 0 }
+  
+  .ft_cp { font-size: 1rem }
+
+}
